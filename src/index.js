@@ -7,7 +7,7 @@ async function handleRequest(request) {
   const targetUrl = url.searchParams.get('url')
 
   if (!targetUrl) {
-    return new Response('Missing "url" query parameter", { status: 400 })
+    return new Response('Missing "url" query parameter', { status: 400 })
   }
 
   const response = await fetch(`https://mercury.postlight.com/parser?url=${encodeURIComponent(targetUrl)}`, {
